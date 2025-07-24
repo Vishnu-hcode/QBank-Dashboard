@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QBank Dashboard - Sidebar Only</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Sidebar JS -->
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="fixed inset-y-0 left-0 z-30 w-64 bg-white shadow-md flex flex-col transform -translate-x-full transition-transform duration-300 md:relative md:translate-x-0 md:z-0 md:flex md:w-64">
+      <div class="px-6 pt-6 pb-2">
+        <span class="flex items-center font-bold text-xl">
+            <span class="material-icons mr-2">lightbulb</span>
+            Cerebellum
+          </span>
+      </div>
+      <nav class="flex-1 p-4 space-y-2">
+        <a href="./home.html" class="flex items-center px-4 py-2 rounded-lg hover:bg-blue-50">
+            <span class="material-icons mr-2">home</span> Home
+          </a>
+          <a href="./videos.html" class="flex items-center px-4 py-2 rounded-lg hover:bg-blue-50">
+            <span class="material-icons mr-2">co_present</span> Videos
+          </a>
+        <a href="qbank.html" class="flex items-center px-4 py-2 rounded-lg hover:bg-blue-50">
+          <span class="material-icons mr-2">description</span> QBank
+        </a>
+        <a href="tests.html" class="flex items-center px-4 py-2 rounded-lg hover:bg-blue-50">
+          <span class="material-icons mr-2">assignment</span> Tests
+        </a>
+        <a href="live.html" class="flex items-center px-4 py-2 rounded-lg hover:bg-blue-50">
+          <span class="material-icons mr-2">podcasts</span> Live
+        </a>
+      </nav>
+      
+
+    </aside>
+
+  
+    <!-- Sidebar Overlay for Mobile -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-40 z-20 hidden md:hidden"></div>
+    <!-- Main Content (Header only for now) -->
+    <main class="flex-1 bg-gray-100 md:ml-0">
+        
+            <!-- Header -->
+            <div class="flex items-center justify-between px-8 py-4 bg-white shadow-sm relative">
+              <!-- Hamburger for mobile -->
+              <button id="sidebar-toggle" class="md:hidden mr-4 focus:outline-none">
+                <span class="material-icons text-3xl text-gray-700">menu</span>
+              </button>
+              <!-- QBank Title -->
+              <span class="text-2xl font-bold text-gray-800 font-serif">QBank</span>
+              <!-- Centered Search Bar -->
+              <div class="flex-1 flex justify-center">
+                <div class="relative w-full max-w-xl">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                    <span class="material-icons">search</span>
+                  </span>
+                  <input type="text" placeholder="Search" class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-50 text-gray-700" />
+                </div>
+              </div>
+              <!-- Bookmark and Avatar -->
+              <div class="flex items-center space-x-4 ml-4">
+                <span class="material-icons text-gray-700">bookmark_border</span>
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-9 h-9 rounded-full border border-gray-300" />
+              </div>
+            </div>
+            <!-- Main Content Grid -->
+             <div class="flex flex-col items-center justify-center h-screen">
+             <h2 class="text-2xl font-bold text-gray-800 font-serif">welcome to videos</h2>
+             </div>
+        
+    </main>
+  </div>
+  <!-- Material Icons CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="./sidebar.js"></script>
+</body>
+</html> 
